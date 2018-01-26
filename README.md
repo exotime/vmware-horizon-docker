@@ -1,8 +1,8 @@
 # VMware Horizon Client in a Docker container
 
-A container built on Ubuntu 16.04, this downloads the VMware Horizon client and
-includes all the necessary dependencies for you to connect to your VMware DaaS
-infrastructure, within a container on your machine.
+A container built on Debian Stretch, this downloads the VMware Horizon client
+and includes all the necessary dependencies for you to connect to your VMware
+DaaS infrastructure, within a container on your machine.
 
 Nice for when you don't want your host to have all the dependencies installed,
 or you'd like some isolation between the VMware binary and the rest of
