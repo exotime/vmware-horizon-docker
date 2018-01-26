@@ -1,4 +1,3 @@
-
 # VMware Horizon Client in a Docker container
 
 A container built on Ubuntu 16.04, this downloads the VMware Horizon client and
