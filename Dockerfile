@@ -12,9 +12,12 @@ ENV URL https://download3.vmware.com/software/view/viewclients/CART18FQ4/VMware-
 #
 # $ docker run -it \
 #       -v /tmp/.X11-unix:/tmp/.X11-unix \
+#       -v ${HOME}/.vmware:/root/.vmware/ \
+#       -v /etc/localtime:/etc/localtime:ro \
+#       -v /dev/bus/usb:/dev/bus/usb \
 #       -e DISPLAY=$DISPLAY \
 #       --device /dev/snd \
-#       exotime/vmware-horizon
+#    exotime/vmware-horizon-docker
 
 RUN apt update && \
     apt install --yes --no-install-recommends \
