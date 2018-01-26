@@ -1,6 +1,6 @@
-FROM ubuntu:16.04
+FROM debian:stretch
 LABEL maintainer="exotime <exotime@users.noreply.github.com>"
-LABEL version="0.1"
+LABEL version="0.1.1"
 
 # Update this URL as necessary. One day I might work this into the script.
 # Run the following command to find the latest URL:
@@ -19,10 +19,14 @@ ENV URL https://download3.vmware.com/software/view/viewclients/CART18FQ4/VMware-
 RUN apt update && \
     apt install --yes --no-install-recommends \
         binutils \
+        ca-certificates \
         curl \
+        freerdp-x11 \
         libatk1.0-dev \
         libgdk-pixbuf2.0-dev \
         libgtk2.0-dev \
+        libusb-dev \
+        libxtst-dev \
         libxss-dev \
         grep \
         python \
@@ -39,4 +43,4 @@ RUN wget $URL && \
     rm ./VMware-Horizon-Client-*.x64.bundle
 
 # Run it!
-CMD /usr/bin/vmware-view
+CMD /usr/lib/vmware/view/usb/vmware-usbarbitrator & /usr/lib/vmware/view/usb/vmware-view-usbd &  /usr/bin/vmware-view
