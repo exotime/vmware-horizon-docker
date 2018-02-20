@@ -1,0 +1,5 @@
+view.enableH264 = "TRUE"
+view.shareRemovableStorage = "FALSE"
+view.usbAutoConnectAtStartUp = "FALSE"
+view.usbAutoConnectOnInsert = "FALSE"
+view.defaultProtocol = "RDP"
