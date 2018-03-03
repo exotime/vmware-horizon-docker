@@ -1,0 +1,10 @@
+# Example config to run in Kiosk mode.
+
+view.kioskLogin = "TRUE"
+view.noMenuBar = "TRUE"
+view.once = "TRUE"
+view.nonInteractive = "TRUE"
+view.fullScreen = "TRUE"
+view.defaultBroker = "view.example.com"
+view.sslVerificationMode = "1"
+view.UnauthenticatedAccessEnabled = ""

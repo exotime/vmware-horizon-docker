@@ -1,0 +1,13 @@
+# This config should be suitable for office workers, possibly with thin clients.
+# Sets domain, fullscreen, connects to default desktop, disables local USB, minimal logging.
+view.defaultBroker = "https://view.example.com"
+view.defaultDomain = "example.com"
+view.allMonitors = "TRUE"
+view.fullScreen = "TRUE"
+view.autoConnectDesktop = "TRUE"
+view.enableH264 = "TRUE"
+view.shareRemovableStorage = "FALSE"
+view.usbAutoConnectAtStartUp = "FALSE"
+view.usbAutoConnectOnInsert = "FALSE"
+view.defaultProtocol = "RDP"
+view.defaultLogLevel = "6"
