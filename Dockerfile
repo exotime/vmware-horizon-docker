@@ -5,7 +5,7 @@ LABEL version="0.1.2"
 # Update this URL as necessary. One day I might work this into the script.
 # Run the following command to find the latest URL:
 # $ curl -s "https://my.vmware.com/web/vmware/details?downloadGroup=CART18FQ4_LIN64_470&productId=578&rPId=20573" | grep -o '<a href="http[^"]*.x64.bundle"' | sed 's/<a href="//;s/"$//'
-ENV URL https://download3.vmware.com/software/view/viewclients/CART18FQ4/VMware-Horizon-Client-4.7.0-7395152.x64.bundle
+ENV URL https://download3.vmware.com/software/view/viewclients/CART20FQ1/VMware-Horizon-Client-5.0.0-12557422.x64.bundle
 
 # To run the container:
 # $ xhost local:docker
