@@ -1,0 +1,12 @@
+#Variable named USER is needed for use with new horizon client.
+
+docker run -it \
+        --privileged \
+        -v /tmp/.X11-unix:/tmp/.X11-unix \
+        -v ${HOME}/.vmware:/root/.vmware/ \
+        -v /etc/localtime:/etc/localtime:ro \
+        -v /dev/bus/usb:/dev/bus/usb \
+        -e DISPLAY=$DISPLAY \
+        -e USER=$USER\
+        --device /dev/snd \
+        exotime/vmware-horizon-docker:latest
