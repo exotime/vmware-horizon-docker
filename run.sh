@@ -11,5 +11,6 @@ docker run -it \
         -v /etc/localtime:/etc/localtime:ro \
         -v /dev/bus/usb:/dev/bus/usb \
         -e DISPLAY=unix$DISPLAY \
+        -e USER=$USER \
         --device /dev/snd \
 	exotime/vmware-horizon-docker:latest
