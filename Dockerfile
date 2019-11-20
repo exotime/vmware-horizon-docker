@@ -5,7 +5,7 @@ LABEL version="0.1.3"
 # Update this URL as necessary. One day I might work this into the script.
 # Run the following command to find the latest URL:
 # $ curl -s "https://my.vmware.com/web/vmware/details?downloadGroup=CART20FQ2_LIN64_510&productId=863&rPId=34529" | grep -o '<a href="http[^"]*.x64.bundle"' | sed 's/<a href="//;s/"$//'
-ENV URL https://download3.vmware.com/software/view/viewclients/CART20FQ2/VMware-Horizon-Client-5.1.0-13956721.x64.bundle
+ENV URL https://download3.vmware.com/software/view/viewclients/CART20FQ3/VMware-Horizon-Client-5.2.0-14604769.x64.bundle
 
 # To run the container:
 # $ xhost local:docker
@@ -17,6 +17,7 @@ ENV URL https://download3.vmware.com/software/view/viewclients/CART20FQ2/VMware-
 #       -v /etc/localtime:/etc/localtime:ro \
 #       -v /dev/bus/usb:/dev/bus/usb \
 #       -e DISPLAY=$DISPLAY \
+#       -e USER=$USER \
 #       --device /dev/snd \
 #    exotime/vmware-horizon-docker
 
@@ -27,8 +28,10 @@ RUN apt update && \
         curl \
         freerdp-x11 \
         libatk1.0-dev \
+        libatk-bridge2.0-dev \
         libgdk-pixbuf2.0-dev \
         libgtk2.0-dev \
+        libgtk-3.0 \
         libengine-pkcs11-openssl \
         libpkcs11-helper1-dev \
         libudev-dev \
