@@ -67,4 +67,4 @@ RUN chmod 0444 /etc/vmware/view-mandatory-config
 RUN chmod 0644 /etc/vmware/view-default-config
 
 # Run the VMware USB Arbitrator, wait for it to start, and then start the view client.
-CMD /usr/lib/vmware/view/usb/vmware-usbarbitrator & sleep 5 && chmod 777 /var/run/vmware/usbarbitrator-socket && /usr/bin/vmware-view
+CMD /usr/lib/vmware/view/usb/vmware-usbarbitrator & sleep 15 && chmod 777 /var/run/vmware/usbarbitrator-socket && /usr/bin/vmware-view
