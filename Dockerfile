@@ -1,11 +1,11 @@
-FROM debian:stretch
+FROM debian:bullseye
 LABEL maintainer="exotime <exotime@users.noreply.github.com>"
-LABEL version="0.1.3"
+LABEL version="0.1.4"
 
 # Update this URL as necessary. One day I might work this into the script.
 # Run the following command to find the latest URL:
 # $ curl -s "https://my.vmware.com/web/vmware/details?downloadGroup=CART20FQ2_LIN64_510&productId=863&rPId=34529" | grep -o '<a href="http[^"]*.x64.bundle"' | sed 's/<a href="//;s/"$//'
-ENV URL https://download3.vmware.com/software/view/viewclients/CART20FQ3/VMware-Horizon-Client-5.2.0-14604769.x64.bundle
+ENV URL https://download3.vmware.com/software/CART24FQ1_LIN64_556/VMware-Horizon-Client-5.5.6-21405009.x64.bundle
 
 # To run the container:
 # $ xhost local:docker
@@ -26,21 +26,22 @@ RUN apt update && \
         binutils \
         ca-certificates \
         curl \
-        freerdp-x11 \
-        libatk1.0-dev \
+        freerdp2-x11 \
+        grep \
         libatk-bridge2.0-dev \
-        libgdk-pixbuf2.0-dev \
-        libgtk2.0-dev \
-        libgtk-3.0 \
+        libatk1.0-dev \
         libengine-pkcs11-openssl \
+        libffi-dev \
+        libgdk-pixbuf2.0-dev \
+        libgtk-3-dev \
+        libgtk2.0-dev \
         libpkcs11-helper1-dev \
+        libpng-dev \
         libudev-dev \
         libusb-dev \
-        libxtst-dev \
         libxss-dev \
-        libpng-dev \
+        libxtst-dev \
         lsb-release \
-        grep \
         python \
         rdesktop \
         sed \
