@@ -14,7 +14,7 @@ on:
   pull_request:
 
 env:
-  IMAGE_NAME: exotime/vmware-horizon-docker
+  IMAGE_NAME: vmware-horizon-docker
 
 jobs:
   # Run tests.

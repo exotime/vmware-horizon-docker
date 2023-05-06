@@ -2,7 +2,7 @@
 
 [![](https://images.microbadger.com/badges/image/exotime/vmware-horizon-docker.svg)](https://microbadger.com/images/exotime/vmware-horizon-docker)
 
-A container built on Debian Stretch, this downloads the VMware Horizon client
+A container built on Debian Bullseye, this downloads the VMware Horizon client
 and includes all the necessary dependencies for you to connect to your VMware
 DaaS infrastructure, within a container on your machine.
 
@@ -17,7 +17,7 @@ it can be run as any user easily.
 
 There are two files related to the VMware Horizon Client configuration. They
 are copied into /etc/vmware/ when the container is built, and provide two types
-of configuration - user changable, and immutable. This can be handy to enforce
+of configuration - user changeable, and immutable. This can be handy to enforce
 settings across your environment - perhaps by enforcing that all connections
 only work when the SSL certificate is verified, or not allowing users to change
 the domain they connect to - but allowing them to choose the client resolution.
