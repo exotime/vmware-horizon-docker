@@ -1,6 +1,7 @@
 FROM debian:bullseye
 LABEL maintainer="exotime <exotime@users.noreply.github.com>"
 LABEL version="0.1.4"
+LABEL org.opencontainers.image.source https://github.com/exotime/vmware-horizon-docker
 
 # Update this URL as necessary. One day I might work this into the script.
 # Run the following command to find the latest URL:
