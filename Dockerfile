@@ -6,7 +6,7 @@ LABEL org.opencontainers.image.source https://github.com/exotime/vmware-horizon-
 # Update this URL as necessary. One day I might work this into the script.
 # Run the following command to find the latest URL:
 # $ curl -s "https://my.vmware.com/web/vmware/details?downloadGroup=CART20FQ2_LIN64_510&productId=863&rPId=34529" | grep -o '<a href="http[^"]*.x64.bundle"' | sed 's/<a href="//;s/"$//'
-ENV URL https://download3.vmware.com/software/CART24FQ1_LIN64_556/VMware-Horizon-Client-5.5.6-21405009.x64.bundle
+ENV URL https://download3.omnissa.com/software/CART25FQ1_LIN64_2312.1/VMware-Horizon-Client-2312.1-8.12.1-23543969.x64.bundle
 
 # To run the container:
 # $ xhost local:docker
@@ -42,6 +42,7 @@ RUN apt update && \
         libusb-dev \
         libxss-dev \
         libxtst-dev \
+        libmagic-dev \
         lsb-release \
         python \
         rdesktop \
@@ -53,7 +54,7 @@ RUN apt update && \
 
 RUN wget $URL && \
     chmod +x VMware-Horizon-Client-*.x64.bundle && \
-    env TERM=dumb VMWARE_EULAS_AGREED=yes ./VMware-Horizon-Client-*.x64.bundle --console --required && \
+    env TERM=dumb VMWARE_EULAS_AGREED=yes ./VMware-Horizon-Client-*.x64.bundle --console --required -I && \
     rm ./VMware-Horizon-Client-*.x64.bundle
 
 # Fix libudev symlink (VMware expects an older version, different path)
